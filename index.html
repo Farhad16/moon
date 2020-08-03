@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon</title>
+    <style>
+        .sky {
+            background-color: black;
+            height: 440px;
+            position: relative;
+            transition: background-color 5s ease-in 1s;
+
+        }
+
+        @keyframes rise {
+
+            0% {
+                top: 50%;
+            }
+
+            100% {
+                top: -300px;
+                box-shadow: 20px 20px 50px 15px grey, 0px 0px 150px grey
+            }
+        }
+
+        .moon {
+            background-color: white;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            position: absolute;
+            right: 0;
+            bottom: -120px;
+            left: 0;
+            margin: auto;
+        }
+
+        .sky:hover {
+            background-color: rgb(37, 36, 36);
+        }
+
+        .sky:hover .moon {
+            animation: rise 10s ease-in-out forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sky">
+        <div class="moon">
+
+        </div>
+    </div>
+</body>
+
+</html>
